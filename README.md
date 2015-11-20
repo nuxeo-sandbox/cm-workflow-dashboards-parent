@@ -1,6 +1,6 @@
 # Nuxeo Case Management Workflow Dashboards Parent Project
 
-This repository is for building the Marketplace package for the Case Management Workflow Dashboards.
+This repository is for building the Plugin and Marketplace package for the Case Management Workflow Dashboards.
 
 This sample uses [Nuxeo Data Visualzation](https://doc.nuxeo.com/x/WZCRAQ) to present a dashboard for each Case Management Workflow.
 
@@ -18,7 +18,9 @@ You may deploy the zip using `nuxeoctl` or the Nuxeo Admin Center.
 
 # Usage
 
-Navigate to `http://yourserver/nuxeo/dam-dashboard`.
+Once installed in the Case Manangement Showcase, these dashboards are available under ADMIN | Workflow.
+
+There is also a bundled Web application for testing at `http://yourserver/nuxeo/cm-workflow-dashboards`.
 
 # Resources
 

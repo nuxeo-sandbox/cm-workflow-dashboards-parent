@@ -33,7 +33,6 @@ Once installed in the Case Manangement Showcase, these dashboards are available 
 
 There is also a bundled Web application for testing at `http://yourserver/nuxeo/cm-workflow-dashboards`.
 
-
 # Resources
 
 ## Reporting issues
