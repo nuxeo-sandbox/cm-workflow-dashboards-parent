@@ -18,6 +18,6 @@
   ],
   "dependencies": {
     "moment": "~2.10.6",
-    "cm-workflow-dashboards-elements": "nuxeo_sandbox/cm-workflow-dashboards-elements#~1.0.2"
+    "cm-workflow-dashboards-elements": "nuxeo-sandbox/cm-workflow-dashboards-elements#~1.0.2"
   }
 }
