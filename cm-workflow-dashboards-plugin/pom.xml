@@ -2,9 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.nuxeo.ecm.distribution</groupId>
-    <artifactId>nuxeo-distribution</artifactId>
-    <version>7.10-SNAPSHOT</version>
+    <groupId>org.nuxeo.cm.demo</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>parent</artifactId>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <groupId>org.nuxeo.cm.demo</groupId>
