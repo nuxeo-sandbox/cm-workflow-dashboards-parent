@@ -1,0 +1,23 @@
+{
+  "name": "cm-workflow-dashboards-plugin",
+  "version": "1.0.0",
+  "authors": [
+    "Josh Fletcher <jfletcher@nuxeo.com>"
+  ],
+  "description": "Nuxeo Case Management Workflow Dashboards Plugin.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "license": "LGPL",
+  "homepage": "https://github.com/nuxeo-sandbox/cm-workflow-dashboards-plugin",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "moment": "~2.10.6",
+    "cm-workflow-dashboards-elements": "jfletcher-nuxeo/cm-workflow-dashboards-elements#~1.0.0"
+  }
+}

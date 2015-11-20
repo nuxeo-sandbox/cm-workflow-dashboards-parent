@@ -1,0 +1,31 @@
+<div xmlns="http://www.w3.org/1999/xhtml" style="overflow: hidden">
+
+  <script src="#{baseURL}bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="#{baseURL}bower_components/moment/min/moment-with-locales.min.js"></script>
+
+  <link rel="import" href="#{baseURL}cm-workflow-dashboards/elements/elements.vulcanized.html"></link>
+
+  <template is="dom-bind">
+
+    <div style="text-align: right; padding: 0 20px;">
+      <input type="date" value="{{startDate::change}}" style="display: inline; width: 150px"></input>
+      <input type="date" value="{{endDate::change}}" style="display: inline; width: 150px"></input>
+    </div>
+
+    <nuxeo-connection url="/nuxeo"></nuxeo-connection>
+
+    <cm-workflow-dashboard-GetInfosAndFiles start-date="[[startDate]]" end-date="[[endDate]]"></cm-workflow-dashboard-GetInfosAndFiles>
+
+  </template>
+
+  <script>
+    var t = document.querySelector('template');
+    var currentDate = moment();
+    t.endDate = currentDate.format("YYYY-MM-DD");
+    t.startDate = currentDate.subtract(6, 'months').format("YYYY-MM-DD");
+    // Workaround for runtime errors with Google Chart.
+    // See https://github.com/google/google-visualization-issues/issues/501
+    Array.prototype.reduce = undefined;
+  </script>
+
+</div>

@@ -1,0 +1,83 @@
+<component name="org.nuxeo.cm.demo.workflow.dashboards.actions.contrib">
+
+  <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
+
+    <action id="TAB_CHECKCONTRACT_WF_ANALYTICS" link="/incl/tabs/check_contract_workflow_analytics.xhtml" order="5" label="Dashboard" icon="/icons/file.gif" type="rest_document_link">
+      <category>VIEW_ACTION_LIST</category>
+      <filter-id>isRoute</filter-id>
+      <filter-id>isCheckContractWorkflow</filter-id>
+    </action>
+
+    <action id="TAB_GETINFOS_WF_ANALYTICS" link="/incl/tabs/get_infos_workflow_analytics.xhtml" order="5" label="Dashboard" icon="/icons/file.gif" type="rest_document_link">
+      <category>VIEW_ACTION_LIST</category>
+      <filter-id>isRoute</filter-id>
+      <filter-id>isGetInfosWorkflow</filter-id>
+    </action>
+
+    <action id="TAB_GETVALUATION_WF_ANALYTICS" link="/incl/tabs/get_valuation_workflow_analytics.xhtml" order="5" label="Dashboard" icon="/icons/file.gif" type="rest_document_link">
+      <category>VIEW_ACTION_LIST</category>
+      <filter-id>isRoute</filter-id>
+      <filter-id>isGetValuationWorkflow</filter-id>
+    </action>
+
+    <action id="TAB_DECISIONS_WF_ANALYTICS" link="/incl/tabs/decisions_workflow_analytics.xhtml" order="5" label="Dashboard" icon="/icons/file.gif" type="rest_document_link">
+      <category>VIEW_ACTION_LIST</category>
+      <filter-id>isRoute</filter-id>
+      <filter-id>isDecisionsWorkflow</filter-id>
+    </action>
+
+    <action id="TAB_ARCHIVE_WF_ANALYTICS" link="/incl/tabs/archive_workflow_analytics.xhtml" order="5" label="Dashboard" icon="/icons/file.gif" type="rest_document_link">
+      <category>VIEW_ACTION_LIST</category>
+      <filter-id>isRoute</filter-id>
+      <filter-id>isArchiveWorkflow</filter-id>
+    </action>
+
+    <action id="TAB_INVESTIGATOR_WF_ANALYTICS" link="/incl/tabs/investigator_workflow_analytics.xhtml" order="5" label="Dashboard" icon="/icons/file.gif" type="rest_document_link">
+      <category>VIEW_ACTION_LIST</category>
+      <filter-id>isRoute</filter-id>
+      <filter-id>isInvestigatorWorkflow</filter-id>
+    </action>
+
+  </extension>
+
+  <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="filters">
+
+    <filter id="isCheckContractWorkflow">
+      <rule grant="true">
+        <condition>#{currentDocument.getTitle() == 'Check Contract'}</condition>
+      </rule>
+    </filter>
+
+    <filter id="isGetInfosWorkflow">
+      <rule grant="true">
+        <condition>#{currentDocument.getTitle() == 'Fill the Case (info, files, ...)'}</condition>
+      </rule>
+    </filter>
+
+    <filter id="isGetValuationWorkflow">
+      <rule grant="true">
+        <condition>#{currentDocument.getTitle() == 'Get Valuation'}</condition>
+      </rule>
+    </filter>
+
+    <filter id="isDecisionsWorkflow">
+      <rule grant="true">
+        <condition>#{currentDocument.getTitle() == 'Decisions'}</condition>
+      </rule>
+    </filter>
+
+    <filter id="isArchiveWorkflow">
+      <rule grant="true">
+        <condition>#{currentDocument.getTitle() == 'Archive'}</condition>
+      </rule>
+    </filter>
+
+    <filter id="isInvestigatorWorkflow">
+      <rule grant="true">
+        <condition>#{currentDocument.getTitle() == 'Investigator workflow'}</condition>
+      </rule>
+    </filter>
+
+  </extension>
+
+</component>
