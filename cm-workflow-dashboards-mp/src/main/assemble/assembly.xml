@@ -1,0 +1,27 @@
+<project name="cm-workflow-dashboards-assembly" default="build" xmlns:nx="urn:nuxeo-build" xmlns:artifact="urn:nuxeo-artifact">
+  <taskdef resource="org/nuxeo/build/antlib.xml" uri="urn:nuxeo-build" />
+  <taskdef resource="org/nuxeo/build/artifact/antlib.xml" uri="urn:nuxeo-artifact" />
+
+  <property name="outdir" value="${maven.project.build.directory}" />
+
+  <target name="build" description="Build Nuxeo Case Management Workflow Marketplace Package">
+    <tstamp />
+    <delete failonerror="false" dir="${outdir}/cm-workflow-dashboards-mp" />
+    <mkdir dir="${outdir}/cm-workflow-dashboards-mp" />
+    <copy todir="${outdir}/cm-workflow-dashboards-mp">
+      <fileset dir="src/main/resources" />
+      <filterset>
+        <filter token="VERSION" value="${maven.project.version}" />
+        <filter token="DISTRIB_VERSION" value="${nuxeo.distribution.version}" />
+      </filterset>
+    </copy>
+
+    <copy todir="${outdir}/cm-workflow-dashboards-mp/install/bundles">
+      <artifact:file key="org.nuxeo.cm.demo:cm-workflow-dashboards-plugin" />
+    </copy>
+
+    <zip destfile="${outdir}/${maven.project.artifactId}-${maven.project.version}.zip" basedir="${outdir}/cm-workflow-dashboards-mp" />
+    <artifact:attach file="${outdir}/${maven.project.artifactId}-${maven.project.version}.zip" type="zip" />
+  </target>
+
+</project>
