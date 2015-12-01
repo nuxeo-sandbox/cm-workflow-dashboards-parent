@@ -10,7 +10,7 @@
 
   <artifactId>cm-workflow-dashboards-mp</artifactId>
   <packaging>zip</packaging>
-  <name>Nuxeo DAM Dashboard Marketplace Package</name>
+  <name>Nuxeo Package for Case Management Workflow Dashboards</name>
 
   <dependencies>
     <dependency>
