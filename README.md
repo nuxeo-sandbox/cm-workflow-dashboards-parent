@@ -6,6 +6,8 @@ This sample uses [Nuxeo Data Visualzation](https://doc.nuxeo.com/x/WZCRAQ) to pr
 
 # Building
 
+[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=Sandbox/sandbox_cm-workflow-dashboards-parent-master)](https://qa.nuxeo.org/jenkins/view/sandbox/job/Sandbox/job/sandbox_cm-workflow-dashboards-parent-master/)
+
 Then navigate into the root folder for this project and run:
 
     mvn clean install
